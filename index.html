@@ -89,7 +89,18 @@
             <a href="#pricing" class="btn btn-warning btn-lg">Buy Now</a>
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
-            <img class="img-fluid" src="/assets/minions2.png" alt="minions2" />
+            <!-- tooltips -->
+            <span
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              title="Minions"
+            >
+              <img
+                class="img-fluid"
+                src="/assets/minions2.png"
+                alt="minions2"
+              />
+            </span>
           </div>
         </div>
       </div>
@@ -494,6 +505,15 @@
                   id="email"
                   placeholder="e.g. minions@example.com"
                 />
+                <!-- tooltip -->
+                <span
+                  class="input-group-text"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Enter an email address we can reply to."
+                >
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
               </div>
 
               <label for="name" class="form-label">Name:</label>
@@ -507,6 +527,15 @@
                   id="name"
                   placeholder="Minions"
                 />
+                <!-- tooltip -->
+                <span
+                  class="input-group-text"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Enter an your name here."
+                >
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
               </div>
 
               <label for="subject" class="form-label">
@@ -547,6 +576,14 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
     <!-- End -->
   </body>
 </html>
